@@ -1,0 +1,22 @@
+node_modules
+.env
+/.idea
+
+# Hardhat files
+/cache
+/artifacts
+/cache-zk
+/artifacts-zk
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json
+
+era_test_node.log
+.DS_Store
+
+deployments/
