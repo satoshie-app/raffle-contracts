@@ -23,4 +23,4 @@ TBD
 
 [@satoshie_app on Telegram](https://t.me/satoshie_app "@satoshie_app")
 
-[@satoshie_app on Linkedin](https://www.linkedin.com/company/satoshie/ "@satoshie_app")
+[@satoshie_app on Linkedin](https://www.linkedin.com/company/satoshie-app/ "@satoshie_app")
