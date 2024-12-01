@@ -11,15 +11,16 @@
 
 ![](https://satoshie-v2-750909246464.europe-west3.run.app/images/logo.svg)
 
-**Table of Contents**
+# Description
 
-[TOCM]
+TBD
 
-[TOC]
-
-# Social Links
+# Follow us
 
 [@satoshie_app on X/Twitter](https://x.com/satoshie_app "@satoshie_app")
+
 [@satoshie_app on Instagram](https://www.instagram.com/satoshie_app/ "@satoshie_app")
+
 [@satoshie_app on Telegram](https://t.me/satoshie_app "@satoshie_app")
+
 [@satoshie_app on Linkedin](https://www.linkedin.com/company/satoshie/ "@satoshie_app")
