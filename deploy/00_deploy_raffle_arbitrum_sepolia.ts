@@ -12,9 +12,9 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
   console.log("Deploying contracts with the account:", deployer);
 
   // Get VRF configuration from environment variables
-  const vrfCoordinator = process.env.TESTNET_VRF_COORDINATOR_ADDRESS;
-  const vrfKeyHash = process.env.ARBITRUM_SEPOLIA_VRF_KEY_HASH; // check for mainnet here in later version
-  const vrfSubscriptionId = process.env.TESTNET_VRF_SUBSCRIPTION_ID;
+  const vrfCoordinator = process.env.VRF_COORDINATOR_ADDRESS_ARBITRUM_SEPOLIA;
+  const vrfKeyHash = process.env.VRF_KEY_HASH_ARBITRUM_SEPOLIA;
+  const vrfSubscriptionId = process.env.VRF_SUBSCRIPTION_ID_ARBITRUM_SEPOLIA;
   const satoshiesWallet = process.env.SATOSHIES_WALLET;
 
   console.log(`
@@ -138,5 +138,5 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 };
 
 export default func;
-func.id = "deploy_raffle_system";
-func.tags = ["SatoshieRaffle", "SatoshieTickets"];
+func.id = "deploy_raffle_system_arb_sepolia";
+func.tags = ["NewRaffleArbitrumSepolia", "SatoshieTickets"];
