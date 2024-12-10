@@ -108,7 +108,7 @@ describe("SatoshieRefund", () => {
       const bobsProof = tree.getProof(0, bob.address, 2);
       const bobsData = ethers.AbiCoder.defaultAbiCoder().encode(
         ["uint256", "uint256"],
-        [0, 2]
+        [0, 2] // index, numberOfTickets
       );
       const bobsBalanceBefore = await ethers.provider.getBalance(bob.address);
       const alicesBalanceBefore = await ethers.provider.getBalance(
@@ -118,12 +118,12 @@ describe("SatoshieRefund", () => {
       const alicesProof = tree.getProof(1, alice.address, 10);
       const alicesData = ethers.AbiCoder.defaultAbiCoder().encode(
         ["uint256", "uint256"],
-        [1, 10]
+        [1, 10] // index, numberOfTickets
       );
       // falice tries to claim more than she bought
       const alicesFakeData = ethers.AbiCoder.defaultAbiCoder().encode(
         ["uint256", "uint256"],
-        [1, 20]
+        [1, 20] // index, numberOfTickets
       );
 
       //   random user tries to claim someone elses refund

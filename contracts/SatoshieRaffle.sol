@@ -191,7 +191,7 @@ contract SatoshieRaffle is
         uint256 randomIndex = entropy % ticketsMinted.length;
         winningTicketId = ticketsMinted[randomIndex];
         gameState = GameState.WINNER_SELECTED;
-        emit WinnerSelected(randomWords[0]);
+        emit WinnerSelected(winningTicketId);
     }
 
     /// @notice Withdraws the sale proceeds

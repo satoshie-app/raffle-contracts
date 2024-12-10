@@ -85,8 +85,8 @@ const config: HardhatUserConfig = {
   etherscan: {
     apiKey: {
       arbitrumOne:
-        process.env.MAINNET_ARBISCAN_API_KEY !== undefined
-          ? process.env.MAINNET_ARBISCAN_API_KEY
+        process.env.ARBISCAN_API_KEY !== undefined
+          ? process.env.ARBISCAN_API_KEY
           : "",
       arbitrumSepolia:
         process.env.ARBISCAN_API_KEY !== undefined
