@@ -56,6 +56,13 @@ describe("SatoshieRaffle", () => {
       expect(await raffle.endDate()).to.equal(raffleData.endDate);
       expect(await raffle.hasRole(await raffle.ADMIN_ROLE(), admin.address)).to
         .be.true;
+
+      await expect(
+        users[29].SatoshieRaffle.getWinningTicketOwner()
+      ).to.be.revertedWithCustomError(
+        contracts.SatoshieRaffle,
+        "NoWinningTicketYet"
+      );
     });
 
     it("If enddate is in the past, raffle should be disabled", async () => {

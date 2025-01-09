@@ -66,10 +66,13 @@ export const setupIntegration = deployments.createFixture(
       ticketPrice: ethers.parseEther("0.01"),
       platformFee: ethers.parseEther("0.2"),
       prizeAmount: ethers.parseEther("1"),
+      // endDate: parseInt(
+      //   (new Date("2025-02-02T11:48:57.000Z").getTime() / 1000).toFixed(0)
+      // ),
       endDate: parseInt(
-        (new Date("2025-01-01T11:48:57.000Z").getTime() / 1000).toFixed(0)
-      ),
-      vrfKeyHash: process.env.VRF_KEY_HASH_ARBITRUM_SEPOLIA as string,
+        ((Date.now() + 30 * 24 * 60 * 60 * 1000) / 1000).toFixed(0)
+      ), // 30 days into the future
+      vrfKeyHash: process.env.VRF_KEY_HASH_ARBITRUM_SEPOLIA as string, // "0x474e34a077df58807dbe9c96d3c009b23b3c6d0cce433e59bbf5b34f823bc56c"; // example key hash
       vrfBaseFee: "1000000000000000", // 0.001 ether as base fee
       vrfGasPriceLink: "50000000000", // 50 gwei
       satoshiesWallet: process.env.SATOSHIES_WALLET as `0x${string}`,

@@ -47,6 +47,8 @@ contract SatoshieRaffle is
 
     mapping(address => uint256) public refundClaimsPerAddress;
 
+    address public winningTicketOwner;
+
     enum GameState {
         DISABLED,
         OPEN,
@@ -190,6 +192,7 @@ contract SatoshieRaffle is
         );
         uint256 randomIndex = entropy % ticketsMinted.length;
         winningTicketId = ticketsMinted[randomIndex];
+        winningTicketOwner = raffleTicket.ownerOf(winningTicketId);
         gameState = GameState.WINNER_SELECTED;
         emit WinnerSelected(winningTicketId);
     }
@@ -265,5 +268,10 @@ contract SatoshieRaffle is
 
     function updateEndDate(uint32 _endDate) public onlyAdmin {
         endDate = _endDate;
+    }
+
+    function getWinningTicketOwner() external view returns (address) {
+        if (winningTicketId == 0) revert NoWinningTicketYet();
+        return winningTicketOwner;
     }
 }
