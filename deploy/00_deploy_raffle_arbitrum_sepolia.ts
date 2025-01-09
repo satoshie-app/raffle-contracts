@@ -139,4 +139,4 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
 export default func;
 func.id = "deploy_raffle_system_arb_sepolia";
-func.tags = ["NewRaffleArbitrumSepolia", "SatoshieTickets"];
+func.tags = ["dev_raffle", "SatoshieTickets"];
