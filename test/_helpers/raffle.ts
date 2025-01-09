@@ -128,11 +128,19 @@ export const winningLogic = async (
 
   console.info("Winning ticket:", winningTicket);
   console.info("Index @ winning ticket:", index);
+  console.info(
+    "Winning ticket owner:",
+    await contracts.SatoshieRaffle.winningTicketOwner()
+  );
   winningIndices.push(index);
   expect(winningTicket).to.not.equal(0);
 
   expect(await contracts.SatoshieRaffle.gameState()).to.equal(
     GameState.WINNER_SELECTED
+  );
+
+  expect(await contracts.SatoshieRaffle.winningTicketOwner()).to.not.equal(
+    ethers.ZeroAddress
   );
 
   const filter2 = contracts.SatoshieRaffle.filters.WinnerSelected();
