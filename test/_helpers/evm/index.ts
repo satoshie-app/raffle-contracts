@@ -69,7 +69,7 @@ export const setupIntegration = deployments.createFixture(
       endDate: parseInt(
         (new Date("2025-01-01T11:48:57.000Z").getTime() / 1000).toFixed(0)
       ),
-      vrfKeyHash: process.env.ARBITRUM_SEPOLIA_VRF_KEY_HASH as string,
+      vrfKeyHash: process.env.VRF_KEY_HASH_ARBITRUM_SEPOLIA as string,
       vrfBaseFee: "1000000000000000", // 0.001 ether as base fee
       vrfGasPriceLink: "50000000000", // 50 gwei
       satoshiesWallet: process.env.SATOSHIES_WALLET as `0x${string}`,
